@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -17,19 +17,19 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import { WebView } from 'react-native-webview';
-
-
+import {WebView} from 'react-native-webview';
+import SplashScreen from 'react-native-splash-screen';
 
 const App: () => Node = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 2000);
+  }, []);
   return (
     <SafeAreaView style={styles.container}>
-
-       <WebView source={{ uri: 'https://chloeconor.com/' }} style={{ flex: 1 }} />
-    
-       </SafeAreaView>
-      
-    
+      <WebView source={{uri: 'https://chloeconor.com/'}} style={{flex: 1}} />
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
