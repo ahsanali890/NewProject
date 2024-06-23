@@ -1,9 +1,9 @@
 package com.awesomeproject;
-
+import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
-
+import org.devio.rn.splashscreen.SplashScreen;
 public class MainActivity extends ReactActivity {
 
   /**
@@ -20,10 +20,7 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "AwesomeProject";
     }
-  @Override
-  protected String getMainComponentName() {
-    return "AwesomeProject";
-  }
+
 
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and
